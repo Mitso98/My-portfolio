@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --orange-icons: #ff5c26;
+}
+
+.bg-holder {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: center no-repeat url('../images/canvas-bg.jpg');
+    background-size: cover;
+}
+
+main {
+    color: white;
+    padding-left: 50px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 45px;
+    margin: 30px 0;
+}
+
+header {
+    width: 100%;
+}
+
+.nav-holder {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 50px;
+}
+
+.fa-icons {
+    color: var(--orange-icons);
+    ;
+    cursor: pointer;
+}
+
+.colored-span {
+    color: var(--orange-icons);
+}
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-holder {
+    width: 40vw;
+    flex: 1;
+    margin-top: 70px;
+}
+
+.wrapper .title h1 {
+    font-size: 75px;
+    margin-bottom: 30px;
+}
+
+.desc p {
+    font-size: xx-large;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--orange-icons);
+    margin-right: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    margin: 0 30px;
+    scale: 1.5;
+}
+
+.cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    justify-content: center;
+    width: fit-content;
+    margin: 50px 0;
+    margin-right: 50px;
+}
+
+.card {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid gray;
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+    
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .bg-holder {
+        min-height: 100vh;
+        max-height: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    li:hover {
+        margin-bottom: 30px;
+    }
+}
+
+/* Hidden Nav */
+#nav-div {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left .social-media .fa-icons {
+    color: var(--orange-icons);
+    ;
+}
+
+.menu-btn-1 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 50px;
+    z-index: 100;
+}
+
+.avatar img {
+    border: 1.5px solid var(--orange-icons);
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    cursor: pointer;
+}
+
+
+.email p {
+    color: var(--orange-icons);
+    inline-size: 18vw;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.left {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(251, 124, 81, 0.3); */
+
+}
+
+.left div {
+    padding: 5px 0;
+}
+
+.right {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    left: 50vw;
+    display: flex;
+    color: var(--orange-icons);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(165, 41, 34, 0.3); */
+}
+
+.right a {
+    text-decoration: none;
+    color: var(--orange-icons);
+}
+
+.right ul {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+ol {
+    position: relative;
+    margin: 15px 0;
+    padding: 10px;
+    width: 140px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+ol:hover {
+
+    scale: 1.5;
+}
