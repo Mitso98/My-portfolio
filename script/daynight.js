@@ -42,6 +42,7 @@ function toggleMode() {
       "--black-opacity",
       obj.day.blackOpacity
     );
+    solar.style.display = "block";
     light.style.display = "none";
     moon.style.display = "block";
   } else {
@@ -54,6 +55,8 @@ function toggleMode() {
       "--black-opacity",
       obj.night.blackOpacity
     );
+    solar.style.display = "none";
+    body.style.overflowX = "hidden";
     light.style.display = "block";
     moon.style.display = "none";
   }
@@ -75,7 +78,7 @@ moon.addEventListener("click", () => {
   light.style.display = "block";
   moon.style.display = "none";
   solar.style.display = "none";
-  localStorage.setItem("mode", "night");
   body.style.overflowX = "hidden";
+  localStorage.setItem("mode", "night");
   toggleMode();
 });
