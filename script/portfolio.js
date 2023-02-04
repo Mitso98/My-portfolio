@@ -20,5 +20,6 @@ for (let i = 0; i < liArr.length; i++) {
         }
       }
     }
+    window.scrollTo({ top: 200 });
   });
 }
