@@ -16,24 +16,23 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
     background: center no-repeat url('../images/canvas-bg.jpg');
     background-size: cover;
 }
-@media only screen and (max-width: 600px) {
-    .bg-holder  {
-            height: 100%;
-    }
-  }
+
+
 
 main {
 
     color: var(--text-color);
     padding-left: 50px;
 }
-header{
+
+header {
     width: 100%;
 }
+
 .nav-holder {
     display: flex;
     justify-content: space-between;
@@ -46,8 +45,9 @@ header{
     ;
     cursor: pointer;
 }
-#moon{
-  display: none;
+
+#moon {
+    display: none;
 }
 
 .colored-span {
@@ -214,11 +214,11 @@ ol:hover {
 }
 
 /* Planets */
-.planets{
-   pointer-events: none;
+.planets {
+    pointer-events: none;
 }
 
-.planets >div{
+.planets>div {
     width: 600px;
     height: 600px;
     overflow: hidden;
@@ -285,7 +285,7 @@ ol:hover {
 }
 
 #venus:after {
-   
+
     width: 40px;
     height: 40px;
     top: 150px;
