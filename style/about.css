@@ -2,7 +2,7 @@
     --orange-icons: rgb(255, 92, 38);
     --orange-opacity: rgba(255, 92, 38, 0.6);
     --black-opacity: rgba(0, 0, 0, 0.7);
-    --pad-20: "20px";
+    --text-color: #fff;
 }
 
 * {
@@ -30,7 +30,7 @@
 
 main {
     width: 100%;
-    color: white;
+    color: var(--text-color);
     padding: 0px 50px;
 }
 

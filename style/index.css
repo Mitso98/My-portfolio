@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&family=Roboto+Slab:wght@100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair', sans-serif;
+}
+
+:root {
+  --orange-icons: #ff5c26;
+  --text-color: #fff;
+  --black-opacity: rgba(0, 0, 0, 0.7);
+}
+
+.bg-holder {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: center no-repeat url("../images/canvas-bg.jpg");
+  background-size: cover;
+}
+
+.nav-holder {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+.fa-icons {
+  color: var(--orange-icons);
+  cursor: pointer;
+}
+
+#moon{
+  display: none;
+}
+
+.name {
+  color: var(--text-color);
+  font-size: 1.5vw;
+    
+}
+.name span {
+  color: var(--text-color);
+}
+
+main {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 42vh;
+  left: 50px;
+}
+
+.contacts {
+  width: fit-content;
+}
+
+.contacts div {
+  margin-bottom: 10px;
+}
+
+.about {
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 5px;
+  width: fit-content;
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+/* Hidden Nav */
+#nav-div {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left .social-media .fa-icons {
+  color: var(--orange-icons);
+}
+
+.menu-btn-1 {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 50px;
+  z-index: 100;
+}
+
+.avatar img {
+  border: 1.5px solid var(--orange-icons);
+  border-radius: 50%;
+  height: 175px;
+  width: 175px;
+  cursor: pointer;
+}
+
+.email p {
+  color: var(--orange-icons);
+  inline-size: 18vw;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.left {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(251, 124, 81, 0.3); */
+}
+
+.left div {
+  padding: 5px 0;
+}
+
+.right {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  left: 50vw;
+  display: flex;
+  color: var(--orange-icons);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(165, 41, 34, 0.3); */
+}
+
+a {
+  text-decoration: none;
+  color: var(--orange-icons);
+}
+
+ul {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+ol {
+  position: relative;
+  margin: 15px 0;
+  padding: 10px;
+  width: 140px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0);
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+}
+
+ol:hover {
+  scale: 1.5;
+}
+
+/* Planets */
+.planets{
+  pointer-events: none;
+}
+
+.planets >div{
+   width: 600px;
+   height: 600px;
+   overflow: hidden;
+}
+
+.planet:after,
+.star:after {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   content: "";
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   transform-origin: center;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.planet,
+.star {
+   position: absolute;
+}
+
+#sun {
+   transform-origin: center center;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+}
+
+#sun:after {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   transform-origin: center center;
+   content: "Full Stack Developer";
+   color: #ff7700;
+   /* background: url("../images/01.jpg"); */
+   box-shadow: 0px 0px 40px #ff7700;
+   margin: auto;
+   width: 100px;
+   height: 100px;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+#venus {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 8s linear infinite;
+}
+
+#venus:after {
+  
+   width: 40px;
+   height: 40px;
+   top: 150px;
+   left: 150px;
+   background: yellow;
+   content: "JS";
+   color: black;
+   text-align: center;
+   font-weight: bold;
+}
+
+#earth {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 16s linear infinite;
+}
+
+#earth:after {
+   width: 50px;
+   height: 50px;
+   top: 200px;
+   left: 200px;
+   background: whitesmoke;
+   content: "NodeJs";
+   color: green;
+}
+
+#mars {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 20s linear infinite;
+}
+
+#mars:after {
+   width: 60px;
+   height: 60px;
+   top: 250px;
+   left: 250px;
+   background: black;
+   content: "ReactJS";
+   color: skyblue;
+}
+
+#jupiter {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 29s linear infinite;
+}
+
+#jupiter:after {
+   width: 70px;
+   height: 70px;
+   top: 300px;
+   left: 300px;
+   background: rgb(255, 235, 199);
+   content: "MongoDB";
+   color: greenyellow;
+}
+
+#saturn {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 35s linear infinite;
+}
+
+#saturn:after {
+   width: 60px;
+   height: 60px;
+   top: 350px;
+   left: 350px;
+   content: "Python";
+   background-color: blue;
+   color: yellow
+}
+
+#uranus {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 40s linear infinite;
+}
+
+#uranus:after {
+   width: 60px;
+   height: 60px;
+   top: 400px;
+   left: 400px;
+   content: "Django";
+   color: rgb(0, 36, 0);
+   background: whitesmoke;
+}
+
+#neptune {
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: planetMove 49s linear infinite;
+}
+
+#neptune:after {
+   width: 60px;
+   height: 60px;
+   top: 450px;
+   left: 450px;
+   content: "Java";
+   color: yellow;
+   background-color: black;
+}
+
+@keyframes planetMove {
+   from {
+       transform: rotate(0deg);
+   }
+
+   to {
+       transform: rotate(360deg);
+   }
+}
+
+@keyframes spinnerRotate {
+   0% {
+       transform: rotate(0deg);
+   }
+
+   100% {
+       transform: rotate(360deg);
+   }
+}
+

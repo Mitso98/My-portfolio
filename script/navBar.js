@@ -1,18 +1,3 @@
-const getNavDiv = document.getElementById("nav-div");
-const left = document.getElementById("left");
-const right = document.getElementById("right");
-const body = document.querySelector("body");
-
-const contactsDiv = document.querySelector(".contacts");
-const bars = document.getElementById("bars");
-const bars1 = document.getElementById("bars-1");
-/*
-const ol1 = document.getElementById("ol-1");
-const ol2 = document.getElementById("ol-2");
-const ol3 = document.getElementById("ol-3");
-const ol4 = document.getElementById("ol-4");
-*/
-
 function seprateDigit(str) {
   // return arr index 0 is the digit and index 1 is the string
   let regex = new RegExp("([0-9]+)|([a-zA-Z]+)", "g");
@@ -105,6 +90,10 @@ bars.addEventListener("click", () => {
     right.style.bottom = "100vh";
     body.style.overflow = "hidden";
     getNavDiv.style.display = "flex";
+
+    try {
+      formHolder.style.zIndex = 0;
+    } catch {}
 
     showNav({ show: true });
   }

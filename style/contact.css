@@ -7,6 +7,9 @@
 
 :root {
     --orange-icons: #ff5c26;
+    --orange-opacity: rgba(255, 92, 38, 0.6);
+    --black-opacity: rgba(0, 0, 0, 0.7);
+    --text-color: #fff;
 }
 
 .bg-holder {
@@ -25,7 +28,7 @@
 
 main {
 
-    color: white;
+    color: var(--text-color);
     padding-left: 50px;
 }
 header{
@@ -59,6 +62,7 @@ header{
     width: 40vw;
     flex: 1;
     margin-top: 70px;
+    z-index: 100;
 }
 
 .wrapper .title h1 {
@@ -69,7 +73,7 @@ header{
 .desc p {
     font-size: 2vw;
     margin-bottom: 30px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--black-opacity);
 
 }
 
@@ -100,7 +104,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    color: white;
+    color: var(--text-color);
     font-size: x-large;
 }
 
@@ -156,7 +160,6 @@ button {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     /* background-color: rgba(251, 124, 81, 0.3); */
-
 }
 
 .left div {
@@ -205,4 +208,222 @@ ol {
 ol:hover {
 
     scale: 1.5;
+}
+
+/* Planets */
+.planets{
+   pointer-events: none;
+}
+
+.planets >div{
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.planet:after,
+.star:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform-origin: center;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.planet,
+.star {
+    position: absolute;
+}
+
+#sun {
+    transform-origin: center center;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#sun:after {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transform-origin: center center;
+    content: "Full Stack Developer";
+    color: #ff7700;
+    /* background: url("../images/01.jpg"); */
+    box-shadow: 0px 0px 40px #ff7700;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#venus {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 8s linear infinite;
+}
+
+#venus:after {
+   
+    width: 40px;
+    height: 40px;
+    top: 150px;
+    left: 150px;
+    background: yellow;
+    content: "JS";
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#earth {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 16s linear infinite;
+}
+
+#earth:after {
+    width: 50px;
+    height: 50px;
+    top: 200px;
+    left: 200px;
+    background: whitesmoke;
+    content: "NodeJs";
+    color: green;
+}
+
+#mars {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 20s linear infinite;
+}
+
+#mars:after {
+    width: 60px;
+    height: 60px;
+    top: 250px;
+    left: 250px;
+    background: black;
+    content: "ReactJS";
+    color: skyblue;
+}
+
+#jupiter {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 29s linear infinite;
+}
+
+#jupiter:after {
+    width: 70px;
+    height: 70px;
+    top: 300px;
+    left: 300px;
+    background: rgb(255, 235, 199);
+    content: "MongoDB";
+    color: greenyellow;
+}
+
+#saturn {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 35s linear infinite;
+}
+
+#saturn:after {
+    width: 60px;
+    height: 60px;
+    top: 350px;
+    left: 350px;
+    content: "Python";
+    background-color: blue;
+    color: yellow
+}
+
+#uranus {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 40s linear infinite;
+}
+
+#uranus:after {
+    width: 60px;
+    height: 60px;
+    top: 400px;
+    left: 400px;
+    content: "Django";
+    color: rgb(0, 36, 0);
+    background: whitesmoke;
+}
+
+#neptune {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: planetMove 49s linear infinite;
+}
+
+#neptune:after {
+    width: 60px;
+    height: 60px;
+    top: 450px;
+    left: 450px;
+    content: "Java";
+    color: yellow;
+    background-color: black;
+}
+
+@keyframes planetMove {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinnerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

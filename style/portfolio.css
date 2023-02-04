@@ -7,6 +7,8 @@
 
 :root {
     --orange-icons: #ff5c26;
+    --text-color: #fff;
+    --black-opacity: rgba(0, 0, 0, 0.7);
 }
 
 .bg-holder {
@@ -14,12 +16,12 @@
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
-    background: center no-repeat url('../images/canvas-bg.jpg');
+    background: center no-repeat url("../images/canvas-bg.jpg");
     background-size: cover;
 }
 
 main {
-    color: white;
+    color: var(--text-color);
     padding-left: 50px;
 }
 
@@ -42,15 +44,12 @@ header {
 
 .fa-icons {
     color: var(--orange-icons);
-    ;
     cursor: pointer;
 }
 
 .colored-span {
     color: var(--orange-icons);
 }
-
-
 
 .wrapper {
     display: flex;
@@ -68,11 +67,12 @@ header {
     margin-bottom: 30px;
 }
 
+
 .desc p {
     font-size: xx-large;
     margin-bottom: 30px;
     margin-right: 50px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--black-opacity);
     padding: 20px;
 }
 
@@ -91,7 +91,7 @@ li {
     width: 100px;
     height: 40px;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     background-color: var(--orange-icons);
     margin-right: 30px;
     transition: 0.3s;
@@ -106,7 +106,6 @@ li:hover {
 .cards-holder {
     display: flex;
     flex-wrap: wrap;
-
 
     justify-content: center;
     width: fit-content;
@@ -128,7 +127,6 @@ li:hover {
 .card img {
     width: 300px;
     height: 200px;
-    
 }
 
 .card h3 {
@@ -174,7 +172,6 @@ li:hover {
 
 .left .social-media .fa-icons {
     color: var(--orange-icons);
-    ;
 }
 
 .menu-btn-1 {
@@ -194,7 +191,6 @@ li:hover {
     cursor: pointer;
 }
 
-
 .email p {
     color: var(--orange-icons);
     inline-size: 18vw;
@@ -210,9 +206,8 @@ li:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:  rgba(0, 0, 0, 0.7);
     /* background-color: rgba(251, 124, 81, 0.3); */
-
 }
 
 .left div {
@@ -228,7 +223,7 @@ li:hover {
     color: var(--orange-icons);
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:  rgba(0, 0, 0, 0.7);
     /* background-color: rgba(165, 41, 34, 0.3); */
 }
 
@@ -259,6 +254,5 @@ ol {
 }
 
 ol:hover {
-
     scale: 1.5;
 }

@@ -12,15 +12,20 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style/about.css" />
-    <script src="script/script.js" defer></script>
+    <script src="./script/vars.js" defer></script>
+    <script src="script/navBar.js" defer></script>
+    <script src="./script/daynight.js" defer></script>
     <title>About</title>
   </head>
   <body>
-    <div class="bg-holder">
+    <div id="bg"class="bg-holder">
       <header>
         <nav class="nav-holder">
-          <div class="toggle-mode">
-            <i class="fa-regular fa-moon fa-5x fa-icons"></i>
+          <div id="moon" class="toggle-mode">
+            <i  class="fa-solid fa-moon fa-5x fa-icons"></i>
+          </div>
+          <div id="light" class="toggle-mode">
+            <i id="light" class="fa-solid fa-bolt-lightning fa-5x fa-icons"></i>
           </div>
           <div class="menu-btn">
             <i id="bars" class="fa-solid fa-bars fa-5x fa-icons"></i>

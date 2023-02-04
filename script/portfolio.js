@@ -1,9 +1,5 @@
-const liArr = document.querySelectorAll("li");
-const cards = document.querySelectorAll(".card");
-
-// console.log(cards[0].classList[1]); => c
-
 /*
+// console.log(cards[0].classList[1]); => c
   add event listner to each li
   then check li ID and dispay cards accordingly
 */
