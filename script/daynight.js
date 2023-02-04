@@ -42,7 +42,9 @@ function toggleMode() {
       "--black-opacity",
       obj.day.blackOpacity
     );
-    solar.style.display = "block";
+    if (solar) {
+      solar.style.display = "block";
+    }
     light.style.display = "none";
     moon.style.display = "block";
   } else {
@@ -55,7 +57,9 @@ function toggleMode() {
       "--black-opacity",
       obj.night.blackOpacity
     );
-    solar.style.display = "none";
+    if (solar) {
+      solar.style.display = "none";
+    }
     body.style.overflowX = "hidden";
     light.style.display = "block";
     moon.style.display = "none";
@@ -68,7 +72,9 @@ light.addEventListener("click", () => {
   // day mode
   light.style.display = "none";
   moon.style.display = "block";
-  solar.style.display = "block";
+  if (solar) {
+    solar.style.display = "block";
+  }
   localStorage.setItem("mode", "day");
   toggleMode();
 });
@@ -77,7 +83,9 @@ moon.addEventListener("click", () => {
   // dark mode
   light.style.display = "block";
   moon.style.display = "none";
-  solar.style.display = "none";
+  if (solar) {
+    solar.style.display = "none";
+  }
   body.style.overflowX = "hidden";
   localStorage.setItem("mode", "night");
   toggleMode();

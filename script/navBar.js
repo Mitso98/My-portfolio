@@ -91,9 +91,9 @@ bars.addEventListener("click", () => {
     body.style.overflow = "hidden";
     getNavDiv.style.display = "flex";
 
-    try {
+    if (formHolder) {
       formHolder.style.zIndex = 0;
-    } catch {}
+    }
 
     showNav({ show: true });
   }
