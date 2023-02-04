@@ -27,6 +27,9 @@
     color: var(--orange-icons);
     cursor: pointer;
 }
+#moon{
+  display: none;
+}
 
 main {
     width: 100%;

@@ -46,6 +46,9 @@ header {
     color: var(--orange-icons);
     cursor: pointer;
 }
+#moon{
+  display: none;
+}
 
 .colored-span {
     color: var(--orange-icons);
